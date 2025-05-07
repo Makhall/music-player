@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      #player {
+        margin: 20px auto;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 15px;
+      }
+      #lyrics {
+        margin-top: 20px;
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎵 Simple YouTube Music Player</h1>
+
+    <div id="player"></div>
+
+    <div>
+      <button onclick="prevSong()">⏮️ Prev</button>
+      <button onclick="togglePlayPause()">⏯️ Play/Pause</button>
+      <button onclick="nextSong()">⏭️ Next</button>
+      <button onclick="volumeUp()">🔊 Vol +</button>
+      <button onclick="volumeDown()">🔉 Vol -</button>
+      <button onclick="toggleShuffle()">🔀 Shuffle</button>
+      <button onclick="toggleLoop()">🔁 Loop</button>
+    </div>
+    <hr />
+    <h3>🎶 Current Playlist</h3>
+    <ul id="playlistDisplay"></ul>
+    <button onclick="clearPlaylist()">🗑️ Clear Playlist</button>
+
+    <hr />
+
+    <h2>🔍 Search & Add Songs</h2>
+    <input type="text" id="searchQuery" placeholder="e.g., Coldplay Paradise" />
+    <button onclick="searchYouTube()">Search</button>
+
+    <ul id="searchResults"></ul>
+
+    <hr />
+    <h3>📜 Lyrics</h3>
+    <div id="lyrics"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
